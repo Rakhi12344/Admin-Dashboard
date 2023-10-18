@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <style>
+        .container {
+            width: 80%;
+            margin: 15px auto;
+          }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class= "menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="main-title">
+                <p class="font-weight-bold">Hello Shahrukh <img src="C:\Users\Mudit Computers\Downloads\wave.png" class="hello">,</p>
+              
+            </div>
+<div class="header-right">
+
+    <div class="search">
+        <form action="#">
+            
+            <input type="text"
+                   placeholder=" Search"
+                   name="search">
+            <button>
+                <i class="fa fa-search"
+                   style="font-size: 18px; margin-top:18px;">
+                </i>
+            </button>
+        </form>
+    </div>
+        
+   
+</div>
+
+        </header>
+       <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+             <span class="material-icons-outlined"></span>Dashboard</div>
+                  <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+      
+        <ul class="sidebar-list">
+            <li class="sidebar-list-item">
+              <span class="material-symbols-outlined">
+                
+                </span>Dashboard </li>
+            <li class="sidebar-list-item">
+                <span class="material-icons-outlined"></span>Product </li>
+            
+            <li class="sidebar-list-item"><span class="material-icons-outlined"></span>Customer</li> 
+        
+            <li class="sidebar-list-item"><span class="material-icons-outlined"></span>Pramote</li> 
+            <li class="sidebar-list-item"><span class="material-symbols-outlined">
+               
+                </span>Help</li> 
+        </ul>
+        <form class="t">
+            <div class=" form-box2"><button type="button"> <img src="C:\Users\Mudit Computers\Downloads\evono.jpg" class="evono"><h4 class="h4">Evono</h4><h5 class="h5">Project manager<h5></button></div>
+        </form> 
+        
+    </aside>
+    
+        <main class="main-container"> 
+            
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <img src="C:\Users\Mudit Computers\Downloads\earning.png" class="earning"><br>
+                        <p class="text-primary">Earning</p>
+                        <spnan class="text-primary- font-weight-bold">$198k</span> </div>
+                        <span class="amterial-icons-outlined text-blue"><h class="hh">37.8%</h>this month </span>
+                     </div>
+                 
+                <div class="card">
+                    <div class="card-inner">
+                        <img src="C:\Users\Mudit Computers\Downloads\order.png" class="order"><br>
+                        <p class="text-primary">Orders</p>
+                        <spnan class="text-primary- font-weight-bold">$2.4k</span>
+                        </div>
+                        <span class="amterial-icons-outlined text-orange"><h class="hh1">2% </h>this month</span>
+
+                    </div>
+                  
+                <div class="card">
+                    <div class="card-inner">
+                        <img src="C:\Users\Mudit Computers\Downloads\897226_balance spendings_budget_money_save money_icon.png" class="balance">
+                       <br>
+                        <p class="text-primary"> Balance</p>
+                        <spnan class="text-primary- font-weight-bold">$2.4k</span>
+                        </div>
+                        <span class="amterial-icons-outlined text-orange"><h class="hh1">2%</h>this month</span>
+                    
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <img src="C:\Users\Mudit Computers\Downloads\sales.png" class="sales"><br>
+                        <p class="text-primary">Total sales</p>
+                        <spnan class="text-primary- font-weight-bold">$89k</span>
+                        </div>
+                        <span class="amterial-icons-outlined text-orange"><h class="hh2">11%</h>this week</span>
+
+                    </div>
+                   
+                </div>
+            
+            </div>
+            <div class="charts">
+                <div class="charts-card">
+                    <p class="chart-title">
+                        Overview <br> </p><p class="p1"> Monthly Earning</p>
+                </p>
+                <div id=bar-Chart></div>
+                </div>
+                <div class="chart-card">
+                    
+                <div id=pie-chart>
+                        <p class="chart-title">
+                            Customers </p><p class="p1">Customers that buy product</p>
+                            <br>
+                            <br>
+                        <div>
+                          <canvas id="myChart"> 
+                          
+                          </canvas>
+                          
+                        </div>
+                      </div>
+                    
+                    </div>
+    
+            </div>
+            <script src="script.js"></script>
+         <div class="report-container">
+            <div class="report-header">
+                <h1 class="Product Sell">Product Sell </h1>
+                <button class="view">Last 30 days</button>
+               
+            </div>
+
+            <div class="report-body">
+                <div class="report-topic-heading">
+                    <h3 class="t-op">Product Name</h3>
+                    <h3 class="t-op">Stocks</h3>
+                    <h3 class="t-op">Price</h3>
+                    <h3 class="t-op">Total sales</h3>
+                </div>
+
+                <div class="items">
+                    <div class="item1">
+                        <h3 class="t-op-nextlvl">    Abstract 3D  </h3>
+                          <h3 class="t-op-nextlvl"> 32 in Stock</h3>
+                        <h3 class="t-op-nextlvl">$45.99</h3>
+                        <h3 class="t-op-nextlvl label-tag">20</h3>
+                    </div>
+                    <div class="item1">
+                        <h3 class="t-op-nextlvl">Sarphens Illustration</h3>
+                        <h3 class="t-op-nextlvl">32 in stock</h3>
+                        <h3 class="t-op-nextlvl">$45.99</h3>
+                        <h3 class="t-op-nextlvl label-tag">20</h3>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+        </main>
+    </div>
+      
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.43.0/apexcharts.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.43.0/apexcharts.min.css"></script>
+
+
+
+
+
+    <script src="script.js"></script>
+  
+     
+</div>
+</body>
+</html>
